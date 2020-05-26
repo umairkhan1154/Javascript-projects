@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href = "style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <form name="forms" id ="forms">
+    <div>
+        <input  name="answers" type="text" style="width: 280px;"/> <br />
+        
+        <input onclick="form.answers.value += '1' " type="button" value="1" />
+        <input type = "button" value = " 2 " onclick="forms.answers.value += '2' " />
+        <input type = "button" value = " 3 " onclick="forms.answers.value += '3' "><br/>
+
+        <input type = "button" value = " 4 " onclick="forms.answers.value += '4' ">
+        <input type = "button" value = " 5 " onclick="forms.answers.value += '5' ">
+        <input type = "button" value = " 6 " onclick="forms.answers.value += '6' "><br/>
+
+        <input type = "button" value = " 7 " onclick="forms.answers.value += '7' ">
+        <input type = "button" value = " 8 " onclick="forms.answers.value += '8' ">
+        <input type = "button" value = " 9 " onclick="forms.answers.value += '9' "><br/>
+
+        <input type = "button" value = " + " onclick="forms.answers.value += '+' ">
+        <input type = "button" value = " - " onclick="forms.answers.value += '-' ">
+        <input type = "button" value = " * " onclick="forms.answers.value += '*' "><br/>
+
+        <input type = "button" value = " / " onclick="forms.answers.value += '/' ">
+        <input type = "button" value = " 0 " onclick="forms.answers.value += '0' ">
+        <input type = "button" value = " = " onclick="forms.answers.value = eval(forms.answers.value) " id = "equal to"><br/>
+
+        <input type = "button" value = "clear all" onclick="forms.answers.value= ''" style="width: 280px;">
+</div>
+
+
+    </forms>
+</body>
+</html>

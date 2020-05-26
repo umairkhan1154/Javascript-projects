@@ -1,0 +1,25 @@
+form{
+    margin: auto;
+    width: 370px;
+    border: 1px solid black;
+    background-color: #363636;
+    border-radius: 10px;
+    text-align: center;
+}
+input{
+    width: 80px;
+    height: 50px;
+    font-size:30px;
+    background-color:whitesmoke;
+    margin:10px;
+    border: none;
+    outline: none;
+    padding: auto;
+   border-radius: 10px;
+}
+#finalanswer{
+    width: 100px;
+}
+div{
+    padding: 20px;
+}
