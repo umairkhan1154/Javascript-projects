@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body{
+        display: flex;
+    }
+    .blue{
+        background-color: #4b90a3;
+    }
+    .Yellow{
+        background-color: #f0ec1d;
+    }
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f52222;
+        width: 33%;
+        height: 656px;
+
+    }
+    table{
+        border-radius: 40px;
+        width: 30%;
+        height: 70vh;
+        text-align: center;
+        background-color: white;
+        padding:10px;
+    box-shadow: 8px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(1, 1, 1, 0.19);
+
+    }
+    td{
+        border-radius: 15px;
+        height: 5vh;
+        background-color: #363636;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        width: 10px;
+        cursor: pointer;
+    }
+    .red{
+        background-color:#f52222;
+    }
+    .yellow{
+        background-color: #f0ba3c;
+    }
+    .green{
+        background-color: #a1d91e;
+
+    }
+    .fans,.fans_1,.fans_2{
+        text-align: right;
+        color: #ed374f;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .orange{
+        background-color: #db8e12;
+    }
+    td:hover{
+        background-color: gray;
+    }
+</style>
+<body>
+    <main class = "Red">
+    <table cellspacing = "10" >
+        <form name = "forms">
+        <tr>
+            <td colspan="4" style="border: none; background-color: white;"  class ="f_ans">
+                <input  name="answers" type="text" style="border: none;" class = "fans" />
+            </td>
+        </tr>
+        <tr>
+            <td class = "yellow" type = "button" onclick="obj()">
+                C
+            </td>
+            <td  class = "yellow" type = "button"  onclick="calcsqrt()">
+                <span>&#8730;</span>
+            </td>
+            <td  class = "yellow" type = "button" value = "D" id = "sqrt" onclick="forms.answers.value += '-' ">
+                +/-
+            </td>
+            <td class = "red" type = "button" value = "/" onclick="forms.answers.value += '/' ">
+                /
+            </td>
+        </tr>
+
+        <tr>
+            <td type = "button" value = " 7 " onclick="forms.answers.value += '7' ">
+                7
+            </td>
+            <td type = "button" value = "8" onclick="forms.answers.value += '8' ">
+                8
+            </td>
+            <td type = "button" value = " 9 " onclick="forms.answers.value += '9' ">
+                9
+            </td>
+            <td  class = "red" type = "button" value = " * " onclick="forms.answers.value += '*' ">
+                x
+            </td>
+        </tr>
+
+        <tr>
+            <td type = "button" value = " 4 " onclick="forms.answers.value += '4' ">
+                4
+            </td>
+            <td type = "button" value = " 5 " onclick="forms.answers.value += '5' ">
+                5
+            </td>
+            <td type = "button" value = " 6 " onclick="forms.answers.value += '6' ">
+                6
+            </td>
+            <td  class = "red" type = "button" value = " - " onclick="forms.answers.value += '-' ">
+                -
+            </td>
+        </tr>
+
+        <tr>
+            <td type = "button" value = " 1 " onclick="forms.answers.value += '1' ">
+                1
+            </td>
+            <td type = "button" value = " 2 " onclick="forms.answers.value += '2' ">
+                2
+            </td>
+            <td type = "button" value = " 3 " onclick="forms.answers.value += '3' ">
+                3
+            </td>
+            <td  class = "red" type = "button" value = " + " onclick="forms.answers.value += '+' ">
+                +
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" type = "button" value = " 0 " onclick="forms.answers.value += '0' ">
+                0
+            </td>
+            <td type = "button" value = " . " onclick="forms.answers.value += '.' ">
+                .
+            </td>
+            <td  class = "red" type = "button" value = " = " onclick="forms.answers.value = eval(forms.answers.value)">
+                =
+            </td>
+        </tr>
+        </form>
+    </table>
+    </main>
+    
+   
+    <main class = "blue">
+        <table cellspacing = "10" >
+            <form name = "forms_1">
+            <tr>
+                <td colspan="4" style="border: none; background-color: white;"  class ="f_ans">
+                    <input  name="answers_1" type="text" style="border: none;" class = "fans_1" />
+                </td>
+            </tr>
+            <tr>
+                <td class = "red" type = "button" onclick="obj_1()">
+                    C
+                </td>
+                <td  class = "red" type = "button" onclick="calcsqrt_1()">
+                    <span>&#8730;</span>
+                </td>
+                <td  class = "red" type = "button" value = "D" id = "sqrt" onclick="forms_1.answers_1.value += '-' ">
+                    +/-
+                </td>
+                <td class = "blue" type = "button" value = "/" onclick="forms_1.answers_1.value += '/' ">
+                    /
+                </td>
+            </tr>
+    
+            <tr>
+                <td type = "button" value = " 7 " onclick="forms_1.answers_1.value += '7' ">
+                    7
+                </td>
+                <td type = "button" value = "8" onclick="forms_1.answers_1.value += '8' ">
+                    8
+                </td>
+                <td type = "button" value = " 9 " onclick="forms_1.answers_1.value += '9' ">
+                    9
+                </td>
+                <td  class = "blue" type = "button" value = " * " onclick="forms_1.answers_1.value += '*' ">
+                    x
+                </td>
+            </tr>
+    
+            <tr>
+                <td type = "button" value = " 4 " onclick="forms_1.answers_1.value += '4' ">
+                    4
+                </td>
+                <td type = "button" value = " 5 " onclick="forms_1.answers_1.value += '5' ">
+                    5
+                </td>
+                <td type = "button" value = " 6 " onclick="forms_1.answers_1.value += '6' ">
+                    6
+                </td>
+                <td  class = "blue" type = "button" value = " - " onclick="forms_1.answers_1.value += '-' ">
+                    -
+                </td>
+            </tr>
+    
+            <tr>
+                <td type = "button" value = " 1 " onclick="forms_1.answers_1.value += '1' ">
+                    1
+                </td>
+                <td type = "button" value = " 2 " onclick="forms_1.answers_1.value += '2' ">
+                    2
+                </td>
+                <td type = "button" value = " 3 " onclick="forms_1.answers_1.value += '3' ">
+                    3
+                </td>
+                <td  class = "blue" type = "button" value = " + " onclick="forms_1.answers_1.value += '+' ">
+                    +
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2" type = "button" value = " 0 " onclick="forms_1.answers_1.value += '0' ">
+                    0
+                </td>
+                <td type = "button" value = " . " onclick="forms_1.answers_1.value += '.' ">
+                    .
+                </td>
+                <td  class = "blue" type = "button" value = " = " onclick="forms_1.answers_1.value = eval(forms_1.answers_1.value)">
+                    =
+                </td>
+            </tr>
+            </form>
+        </table>
+    </main>
+     
+    <main class = "Yellow">
+        <table cellspacing = "10" >
+            <form name = "forms_2">
+            <tr>
+                <td colspan="4" style="border: none; background-color: white;"  class ="f_ans">
+                    <input  name="answers_2" type="text" style="border: none;" class = "fans_2" />
+                </td>
+            </tr>
+            <tr>
+                <td class = "orange" type = "button" onclick="obj_2()">
+                    C
+                </td>
+                <td  class = "orange" type = "button" onclick="calcsqrt_2()">
+                    <span>&#8730;</span>
+                </td>
+                <td  class = "orange" type = "button" value = "D" id = "sqrt" onclick="forms_2.answers_2.value += '-' ">
+                    +/-
+                </td>
+                <td class = "green" type = "button" value = "/" onclick="forms_2.answers_2.value += '/' ">
+                    /
+                </td>
+            </tr>
+    
+            <tr>
+                <td type = "button" value = " 7 " onclick="forms_2.answers_2.value += '7' ">
+                    7
+                </td>
+                <td type = "button" value = "8" onclick="forms_2.answers_2.value += '8' ">
+                    8
+                </td>
+                <td type = "button" value = " 9 " onclick="forms_2.answers_2.value += '9' ">
+                    9
+                </td>
+                <td  class = "green" type = "button" value = " * " onclick="forms_2.answers_2.value += '*' ">
+                    x
+                </td>
+            </tr>
+    
+            <tr>
+                <td type = "button" value = " 4 " onclick="forms_2.answers_2.value += '4' ">
+                    4
+                </td>
+                <td type = "button" value = " 5 " onclick="forms_2.answers_2.value += '5' ">
+                    5
+                </td>
+                <td type = "button" value = " 6 " onclick="forms_2.answers_2.value += '6' ">
+                    6
+                </td>
+                <td  class = "green" type = "button" value = " - " onclick="forms_2.answers_2.value += '-' ">
+                    -
+                </td>
+            </tr>
+    
+            <tr>
+                <td type = "button" value = " 1 " onclick="forms_2.answers_2.value += '1' ">
+                    1
+                </td>
+                <td type = "button" value = " 2 " onclick="forms_2.answers_2.value += '2' ">
+                    2
+                </td>
+                <td type = "button" value = " 3 " onclick="forms_2.answers_2.value += '3' ">
+                    3
+                </td>
+                <td  class = "green" type = "button" value = " + " onclick="forms_2.answers_2.value += '+' ">
+                    +
+                </td>
+            </tr>
+    
+            <tr>
+                <td colspan="2" type = "button" value = " 0 " onclick="forms_2.answers_2.value += '0' ">
+                    0
+                </td>
+                <td type = "button" value = " . " onclick="forms_2.answers_2.value += '.' ">
+                    .
+                </td>
+                <td  class = "green" type = "button" value = " = " onclick="forms_2.answers_2.value = eval(forms_2.answers_2.value)">
+                    =
+                </td>
+            </tr>
+            </form>
+        </table>
+    </main>
+</body>
+<script>
+    const obj =() => {
+        var result = document.querySelector('.fans');
+        result.value = '';
+    };
+
+    function calcsqrt(){
+        var num = document.querySelector('.fans').value;
+        var result  = document.querySelector('.fans');
+        if (Math.sign(num) == -1){
+            num *= (-1);
+            result.value = `${Math.sqrt(num)} i`
+
+        }
+        else {
+            result.value = Math.sqrt(num);
+        };
+
+    };
+
+    const obj_1 =() => {
+        var result_1 = document.querySelector('.fans_1');
+        result_1.value = '';
+    };
+
+    function calcsqrt_1(){
+        var num_1 = document.querySelector('.fans_1').value;
+        var result_1  = document.querySelector('.fans_1');
+        if (Math.sign(num_1) == -1){
+            num_1 *= (-1);
+            result_1.value = `${Math.sqrt(num_1)} i`
+
+        }
+        else {
+            result_1.value = Math.sqrt(num_1);
+        };
+
+    };
+
+    const obj_2 =() => {
+        var result_2 = document.querySelector('.fans_2');
+        result_2.value = '';
+    };
+
+    function calcsqrt_2(){
+        var num_2 = document.querySelector('.fans_2').value;
+        var result_2  = document.querySelector('.fans_2');
+        if (Math.sign(num_2) == -1){
+            num_2 *= (-1);
+            result_2.value = `${Math.sqrt(num_2)} i`
+
+        }
+        else {
+            result_2.value = Math.sqrt(num_2);
+        };
+
+    };
+</script>
+</html>
